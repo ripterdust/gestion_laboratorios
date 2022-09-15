@@ -1,0 +1,21 @@
+.employees {
+    .table {
+        td {
+            .name {
+                font-size: 15px;
+            }
+
+            .mail {
+                color: $lFontColor;
+            }
+
+            .date {
+                font-size: 14px;
+            }
+
+            .department {
+                color: $lFontColor;
+            }
+        }
+    }
+}

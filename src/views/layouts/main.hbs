@@ -1,0 +1,81 @@
+<html lang='en'>
+
+    <head>
+        <meta charset='UTF-8' />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <link rel='stylesheet' href='/resources/css/main.css' />
+        <title>{{title}}</title>
+        <link rel='icon' type='image/svg+xml' href='' />
+        <link
+            rel='stylesheet'
+            href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'
+            integrity='sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=='
+            crossorigin='anonymous'
+            referrerpolicy='no-referrer'
+        />
+    </head>
+
+    <body>
+
+        <aside class='sticky'>
+            <div class='title'>
+                <i class='fa-solid fa-store'></i>
+                <span>Dashboard</span>
+            </div>
+
+            <div class='options'>
+                <a href='/' class='option'>
+                    <i class='fa-solid fa-house'></i>
+                    <span>Inicio</span>
+                </a>
+                <a href='/clients' class='option'>
+                    <i class='fa-solid fa-hospital-user'></i>
+                    <span>Pacientes</span>
+                </a>
+                <a href='/tests' class='option'>
+                    <i class='fa-solid fa-flask-vial'></i>
+                    <span>Examenes</span>
+                </a>
+                <a href='/laboratories' class='option'>
+                    <i class='fa-solid fa-virus-covid'></i>
+                    <span>Laboratorios</span>
+                </a>
+                <a href='/packs' class='option'>
+                    <i class='fa-solid fa-boxes-packing'></i>
+                    <span>Paquetes</span>
+                </a>
+                <a href='/employees' class='option'>
+                    <i class='fa-solid fa-people-carry-box'></i>
+                    <span>Empleados</span>
+                </a>
+                <a href='/sales' class='option'>
+                    <i class='fa-solid fa-money-bill-trend-up'></i>
+                    <span>Ventas</span>
+                </a>
+                <a href='/inventory' class='option'>
+                    <i class='fa-solid fa-boxes-stacked'></i>
+                    <span>Inventario</span>
+                </a>
+
+            </div>
+        </aside>
+
+        <div class='dashboard'>
+            <div class='nav'>
+                <a href='/' class='name'>
+                    {{nombre_usuario}}
+                </a>
+
+                <a href='/auth/logout' class='out'>Cerrar Sesión</a>
+            </div>
+
+            <!-- Document body -->
+            {{{body}}}
+            <script src='resources/js/activeNavLink.js'></script>
+
+        </div>
+
+    </body>
+
+</html>

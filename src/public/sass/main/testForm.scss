@@ -1,0 +1,17 @@
+.formDataTest {
+    margin: 1em 0;
+    .params {
+        .param {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-bottom: 0.5em;
+            input {
+                padding: 0.5em 1em;
+            }
+            .paramsTest {
+                text-align: right;
+            }
+        }
+    }
+}

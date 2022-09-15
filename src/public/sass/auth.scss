@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error {
+    width: 100%;
+    padding: 0.5em;
+    background: rgba(#00ac96, 0.2);
+    text-align: center;
+    margin-bottom: 0.3em;
+    border-radius: 1em;
+    color: #00ac96;
+    border: 1px solid #00ac96;
+}
+.content {
+    margin: 8%;
+    background-color: #fff;
+    padding: 4rem 1rem 4rem 1rem;
+    border-radius: 2em;
+}
+.signin-text {
+    font-style: normal;
+    font-weight: 600;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border-color: #00ac96;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    padding: 0.5em;
+    color: #495057;
+    height: auto;
+    border-radius: 0;
+    background-color: #fff;
+    background-clip: padding-box;
+}
+
+input:-webkit-autofill::first-line {
+    font-family: "Poppins";
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #fff;
+    outline: 0;
+    box-shadow: none;
+}
+.birthday-section {
+    padding: 15px;
+}
+.btn-class {
+    border-color: #00ac96;
+    color: #00ac96;
+}
+.btn-class:hover {
+    background-color: #00ac96;
+    color: #fff;
+}
+
+a {
+    margin-left: 1em;
+}

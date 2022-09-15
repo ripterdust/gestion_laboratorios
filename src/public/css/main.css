@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+/*   border radius */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #344767;
+  font-family: "Poppins", sans-serif;
+}
+
+.grid .card, .box {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.grid .card, .box {
+  width: 100%;
+  background: white;
+  max-height: 100%;
+  border-radius: 2em;
+  padding: 1.5em;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  column-gap: 1em;
+  padding: 1em 1.5em;
+  background: #f8f9fa;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #344767;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.button {
+  background-image: linear-gradient(310deg, #7928ca, #ff0080);
+  padding: 0.5em 1em;
+  color: white;
+  border-radius: 1em;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+.button:active {
+  transform: scale(0.9);
+}
+
+input:focus {
+  outline-color: #7928ca;
+  color: #7928ca;
+}
+
+.mt-1 {
+  margin-top: 1em;
+}
+
+.mt-2 {
+  margin-top: 2em;
+}
+
+.search {
+  width: 500%;
+  background: white;
+  max-height: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 1em;
+  padding: 0.5em;
+  max-width: 40vw;
+  margin-bottom: 0.5em;
+}
+.search .form .form-control {
+  margin-bottom: 0;
+  height: 2.5rem;
+}
+.search .form .form-control-input {
+  padding: 0.5em;
+}
+.search .form .form-control-label {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+
+.box {
+  max-width: 80vw;
+}
+.box .title {
+  font-weight: bold;
+  font-size: 15px;
+}
+.box .title-with-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard {
+  padding: 1em;
+}
+.dashboard .metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1em;
+  margin-bottom: 1em;
+}
+.dashboard .metrics .metric {
+  background: white;
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.dashboard .metrics .metric .text .title {
+  font-size: 14px;
+  color: #677fa4;
+  font-weight: 400;
+}
+.dashboard .metrics .metric .text .number {
+  font-weight: bold;
+  font-size: 17px;
+}
+.dashboard .metrics .metric i {
+  background-image: linear-gradient(310deg, #7928ca, #ff0080);
+  padding: 0.7em;
+  border-radius: 0.5em;
+  color: white;
+  font-size: 18px;
+}
+.dashboard .table_list .table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+.dashboard .table_list .table tr:nth-of-type(1) {
+  margin-left: 1em;
+  border-bottom: 1px solid #b9c1cf;
+}
+.dashboard .table_list .table tr:nth-of-type(1) th {
+  text-align: left;
+  font-size: 13px;
+  color: #b9c1cf;
+}
+.dashboard .table_list .table tr:not(:first-child):hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 0.5em;
+}
+.dashboard .table_list .table tr:not(:first-child):hover td .action {
+  background-image: linear-gradient(310deg, #7928ca, #ff0080);
+}
+.dashboard .table_list .table tr:not(:first-child):hover td .action i {
+  color: white;
+}
+.dashboard .table_list .table tr:not(:first-child) .small_text {
+  font-size: 13px;
+}
+.dashboard .table_list .table tr:not(:first-child) td {
+  color: #344767;
+  padding: 1em;
+}
+.dashboard .table_list .table tr:not(:first-child) td .ltext {
+  color: #b9c1cf;
+}
+.dashboard .table_list .table tr:not(:first-child) td .table_text {
+  color: #677fa4;
+}
+.dashboard .table_list .table tr:not(:first-child) td .action {
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  cursor: pointer;
+}
+.dashboard .table_list .table tr:not(:first-child) td .action i {
+  text-align: center;
+}
+.dashboard .table_list .table tr:not(:first-child) td .mr {
+  margin-right: 0.5em;
+}
+.dashboard .table_list .table tr:not(:first-child) td i {
+  font-size: 13px;
+}
+
+.form {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  padding: 1em;
+}
+.form .error {
+  width: 100%;
+  background: linear-gradient(310deg, #7928ca, #ff0080);
+  color: white;
+  border-radius: 0.5rem;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+.form .form-submit {
+  display: flex;
+  height: 100%;
+  padding: 1em;
+}
+.form .form-control {
+  background: white;
+  position: relative;
+  height: 3rem;
+  margin-bottom: 1em;
+}
+.form .form-control-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(121, 40, 202, 0.5);
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 1.25rem;
+  background: transparent;
+  color: #344767;
+  z-index: 2;
+}
+.form .form-control-input:hover {
+  border-color: rgba(121, 40, 202, 0.7);
+}
+.form .form-control-input:focus {
+  border-color: #7928ca;
+}
+.form .form-control-label {
+  position: absolute;
+  left: 1rem;
+  top: 0.8rem;
+  padding: 0 0.5rem;
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  background: white;
+  z-index: 1;
+}
+.form .form-control-input:focus ~ .form-control-label,
+.form .form-control .form-control-input:not(:placeholder-shown).form-control-input:not(:focus) ~ .form-control-label {
+  top: -0.5rem;
+  font-size: 0.9rem;
+  left: 0.8rem;
+  color: #7928ca;
+  z-index: 3;
+}
+
+.title-section {
+  margin-top: 1.5em;
+  max-width: 50%;
+  padding: 1em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+.grid .card {
+  width: 100%;
+  transition: 0.1s ease-in-out;
+  text-align: center;
+}
+.grid .card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.grid .card .title {
+  font-weight: bold;
+  font-size: 20px;
+}
+.grid .card .description {
+  text-align: center;
+  font-size: 14px;
+  margin: 0.5em 0;
+}
+.grid .card .content {
+  padding: 1em;
+  list-style: none;
+}
+.grid .card .button {
+  text-align: center;
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+aside {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+aside .title {
+  padding: 1em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4em;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-weight: bold;
+}
+aside .title i {
+  margin-right: 0.5em;
+  font-size: 25px;
+}
+aside .options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin-top: 1em;
+}
+aside .options .option {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1em;
+  margin-bottom: 0.5em;
+}
+aside .options .option i {
+  margin-right: 0.5em;
+  background: white;
+  padding: 0.5em;
+  border-radius: 8px;
+  font-size: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+aside .options .activo {
+  background: white;
+  border-radius: 1em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 0.1s ease-in-out;
+}
+aside .options .activo i {
+  box-shadow: none;
+  background-image: linear-gradient(310deg, #7928ca, #ff0080);
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.dashboard .nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.dashboard .nav .name,
+.dashboard .nav .out {
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.dashboard .nav .name {
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.dashboard .nav .out {
+  background-image: linear-gradient(310deg, #7928ca, #ff0080);
+  color: white;
+}
+.dashboard .nav .out:active {
+  transform: scale(0.98);
+}
+
+.dashboard .chart {
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background: white;
+  border-radius: 1em;
+  padding: 1.5em;
+}
+.dashboard .chart .title {
+  font-size: 15px;
+  font-weight: bold;
+}
+.dashboard .chart .chartCanvas {
+  max-height: 45vh;
+}
+
+.employees .table td .name {
+  font-size: 15px;
+}
+.employees .table td .mail {
+  color: #677fa4;
+}
+.employees .table td .date {
+  font-size: 14px;
+}
+.employees .table td .department {
+  color: #677fa4;
+}
+
+.formDataTest {
+  margin: 1em 0;
+}
+.formDataTest .params .param {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 0.5em;
+}
+.formDataTest .params .param input {
+  padding: 0.5em 1em;
+}
+.formDataTest .params .param .paramsTest {
+  text-align: right;
+}
+
+/*# sourceMappingURL=main.css.map */

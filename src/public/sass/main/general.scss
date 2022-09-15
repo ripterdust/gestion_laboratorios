@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $fontColor;
+    font-family: "Poppins", sans-serif;
+}
+
+%shadow {
+    box-shadow: $boxShadow;
+}
+
+%boxStyles {
+    @extend %shadow;
+    width: 100%;
+    background: white;
+    max-height: 100%;
+    border-radius: 2em;
+    padding: 1.5em;
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 1em;
+    padding: 1em 1.5em;
+    background: $bg;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: $fontColor;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+// Button styles
+.button {
+    background-image: $gradient;
+    padding: 0.5em 1em;
+    color: white;
+    border-radius: 1em;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+input:focus {
+    outline-color: $purple;
+    color: $purple;
+}
+
+.mt-1 {
+    margin-top: 1em;
+}
+
+.mt-2 {
+    margin-top: 2em;
+}
+
+// Search box
+.search {
+    width: 500%;
+    background: white;
+    max-height: 100%;
+    box-shadow: $boxShadow;
+    border-radius: 1em;
+    padding: 0.5em;
+    max-width: calc(50vw / 5 * 4);
+    margin-bottom: 0.5em;
+    .form {
+        .form-control {
+            margin-bottom: 0;
+            height: 2.5rem;
+            &-input {
+                padding: 0.5em;
+            }
+
+            &-label {
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+// white box bg
+.box {
+    @extend %boxStyles;
+    max-width: calc(100vw / 5 * 4);
+
+    .title {
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .title-with-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.dashboard {
+    padding: 1em;
+
+    // Metrics
+    .metrics {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1em;
+        margin-bottom: 1em;
+
+        .metric {
+            background: white;
+            padding: 1em;
+            border-radius: 1em;
+            box-shadow: $boxShadow;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .text {
+                .title {
+                    font-size: 14px;
+                    color: $lFontColor;
+                    font-weight: 400;
+                }
+                .number {
+                    font-weight: bold;
+                    font-size: 17px;
+                }
+            }
+
+            i {
+                background-image: $gradient;
+                padding: 0.7em;
+                border-radius: 0.5em;
+                color: white;
+                font-size: 18px;
+            }
+        }
+    }
+
+    // Vista de tabla
+    .table_list {
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+
+            tr:nth-of-type(1) {
+                margin-left: 1em;
+                border-bottom: 1px solid $fontL;
+                th {
+                    text-align: left;
+                    font-size: 13px;
+                    color: $fontL;
+                }
+            }
+
+            tr:not(:first-child) {
+                &:hover {
+                    box-shadow: $boxShadow;
+                    border-radius: 0.5em;
+
+                    td {
+                        .action {
+                            background-image: $gradient;
+                            i {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                .small_text {
+                    font-size: 13px;
+                }
+                td {
+                    color: $fontColor;
+                    padding: 1em;
+
+                    .ltext {
+                        color: $fontL;
+                    }
+
+                    .table_text {
+                        color: $lFontColor;
+                    }
+                    .action {
+                        padding: 0.5em 1em;
+                        border-radius: 1em;
+                        cursor: pointer;
+                        i {
+                            text-align: center;
+                        }
+                    }
+                    .mr {
+                        margin-right: 0.5em;
+                    }
+
+                    i {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.form {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 1em;
+    .error {
+        width: 100%;
+        background: $gradient;
+        color: white;
+        border-radius: $radius;
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+    .form-submit {
+        display: flex;
+        height: 100%;
+        padding: 1em;
+    }
+    .form-control {
+        background: white;
+        position: relative;
+        height: 3rem;
+        margin-bottom: 1em;
+        &-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid rgba($purple, 0.5);
+            font-family: inherit;
+            font-size: inherit;
+            border-radius: $radius;
+            outline: none;
+            padding: 1.25rem;
+            background: transparent;
+            color: $fontColor;
+            z-index: 2;
+
+            &:hover {
+                border-color: rgba($purple, 0.7);
+            }
+
+            &:focus {
+                border-color: $purple;
+            }
+        }
+
+        &-label {
+            position: absolute;
+            left: 1rem;
+            top: 0.8rem;
+            padding: 0 0.5rem;
+            cursor: text;
+            transition: top 200ms ease-in, left 200ms ease-in,
+                font-size 200ms ease-in;
+            background: white;
+            z-index: 1;
+        }
+
+        &-input:focus ~ .form-control-label,
+        .form-control-input:not(:placeholder-shown).form-control-input:not(:focus)
+            ~ .form-control-label {
+            top: -0.5rem;
+            font-size: 0.9rem;
+            left: 0.8rem;
+            color: $purple;
+            z-index: 3;
+        }
+    }
+}
+
+.title-section {
+    margin-top: 1.5em;
+    max-width: 50%;
+    padding: 1em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    .card {
+        @extend %boxStyles;
+        width: 100%;
+        transition: 0.1s ease-in-out;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .description {
+            text-align: center;
+            font-size: 14px;
+            margin: 0.5em 0;
+        }
+
+        .content {
+            padding: 1em;
+            list-style: none;
+        }
+
+        .button {
+            text-align: center;
+            margin-top: 1em;
+            font-weight: bold;
+        }
+    }
+}
